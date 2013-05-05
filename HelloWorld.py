@@ -3,20 +3,11 @@ import webapp2
 form ="""
         <form method ='post' action="/testform">
                 <!-- action where a form submits to -->
-                <group>
-                    <label>
-                        One
-                        <input type = "radio" name = 'q' value='one' />
-                    </label>
-                    <label>
-                        two
-                        <input type = "radio" name = 'q' value='two' "/>
-                    </label>
-                    <label>
-                        three
-                        <input type = "radio" name = 'q' value='three' "/>
-                    </label>
-                </group>
+                <select name = 'q'>
+                    <option>one</option>
+                    <option>two</option>
+                    <option>three</option>
+                </select>
                 <br>
                 <!-- Submits the form which by default submit to itself--></-->
                 <input type="submit" />
