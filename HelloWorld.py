@@ -4,9 +4,9 @@ form ="""
         <form method ='post' action="/testform">
                 <!-- action where a form submits to -->
                 <select name = 'q'>
-                    <option>one</option>
-                    <option>two</option>
-                    <option>three</option>
+                    <option value='1'>one</option>
+                    <option value='2'>two</option>
+                    <option value='3'>three</option>
                 </select>
                 <br>
                 <!-- Submits the form which by default submit to itself--></-->
