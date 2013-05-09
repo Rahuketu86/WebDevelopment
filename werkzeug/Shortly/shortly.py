@@ -5,10 +5,12 @@ def application_wsgi(environ,start_response):
     start_response('200 OK', [('Content-Type', 'text/plain')])
     return ["Hello World"]
 
-from werkzeug.wrappers import Response
+from werkzeug.wrappers import Response,Request
 
 def application(environ,start_response):
-    response = Response('Hello Worlsd!',mimetype='text\plain')
+    request = Request(environ)
+    text = "Hello %s!"% request.args.get('name','World')
+    response = Response(text,mimetype='text\plain')
     return response(environ,start_response) 
 
 if __name__ =='__main__':
